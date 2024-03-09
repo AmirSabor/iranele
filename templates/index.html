@@ -88,10 +88,10 @@
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                     {% if item.inventory == True %}
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">خرید</a></div>
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' item.id %}">خرید</a></div>
                                         </div>
                                     {% else %}
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">ناموجود</a></div>
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' item.id %}">ناموجود</a></div>
                                     {% endif %}
                             </div>
                             </div>
