@@ -46,3 +46,6 @@ class Order(models.Model):
     date = models.DateField(default=datetime.datetime.today())
     status = models.BooleanField(default=False)
 
+
+    def __str__(self):
+        return self.product
