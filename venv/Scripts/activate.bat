@@ -1,4 +1,4 @@
-@set "VIRTUAL_ENV=C:\Users\ASUS\Desktop\iranele\venv"
+@set "VIRTUAL_ENV=C:\Users\PSG\PycharmProjects\iranele\venv"
 
 @if defined _OLD_VIRTUAL_PROMPT (
     @set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
