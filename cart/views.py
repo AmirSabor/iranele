@@ -1,17 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .cart import Cart
+from shop.models import Product
+from django.http import JsonResponse
+
 
 def cart_summery(request):
-    return render(request,"cart_summery.html",{})
+    return render(request, "cart_summery.html", {})
 
 
 def cart_add(request):
-    pass
+    cart = Cart(request)
 
+    if request.POST.get('action') == 'post':
+        product_id = int(request.POST.get('product_id'))
+        product = get_object_or_404(Product, id=product_id)
+        cart.add(product=product)
+
+        cart_quantity = cart.__len__()
+
+        # response = JsonResponse({'Product name': product.title})
+        response = JsonResponse({'qty': cart_quantity})
+        return response
 
 
 def cart_delete(request):
     pass
-
 
 
 def cart_update(request):
