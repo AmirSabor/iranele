@@ -42,10 +42,6 @@ INSTALLED_APPS = [
     'django_cleanup',
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
-
-
-
-    'azbankgateways',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart',
+
+
             ],
         },
     },
